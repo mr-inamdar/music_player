@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="pics/Musiq Logo Design-modified.png">
+    <title>Musiqqq</title>
+</head>
+<body>
+    <div id="main">
+        <header id="web_header">
+            <img src="pics/Musiq Logo Design.png" alt="" id="logo">
+            <div id="search_system">
+                <label for="search_system">Search: </label>
+                <input type="text" name="search_system" id="search_inp" placeholder="Search Songs...">
+                <i class="bi bi-search" onclick="find_matches()"></i>
+                <div class="search_results"></div>
+            </div>
+            <ul id="options">
+                <button id="close" class="normal" onclick="close_nav_bar()">X</button>
+                <li>Home<i class="bi bi-house-fill"></i></li>
+                <li>Dawload App<i class="bi bi-cloud-arrow-down-fill"></i></li>
+                <li>Pro<i class="bi bi-earbuds"></i></li>
+                <li>Create/prasnalize<i class="bi bi-bookmark-plus-fill"></i></li>
+                <li>Sign In</li>
+                <button class="normal">Log In</button>
+            </ul>
+            <div id="mobile_list_icon" onclick="display_nav_bar()"><i class="bi bi-list"></i></div>
+        </header>
+        <div id="sub_main">
+            <div id="playlist">
+                <header id="playlist_header">
+                    <h1>Playlist</h1>
+                    <h4 class="active"><span></span><i class="bi bi-apple-music"></i> Playlist</h4>
+                    <h4><span></span><i class="bi bi-apple-music"></i> Last Listening</h4>
+                    <h4><span></span><i class="bi bi-apple-music"></i> Recommended</h4>
+                </header>
+                <div id="playlist_songs">
+                    <li>
+                        <span>01</span>
+                        <img src="pics/kgn.webp" alt="">
+                        <h5>
+                            Choote Na Kabhi Tera Daaman
+                            <div class="subtitel">Milad Raza Qadri</div>
+                        </h5>
+                        <i class="bi playListPlay bi-play-circle-fill" id="1"></i>
+                    </li>
+                    <li>
+                        <span>02</span>
+                        <img src="pics/2.jpg" alt="">
+                        <h5>
+                            Jogi-Shaadi Mein Zaroor Aana
+                            <div class="subtitel">Yasser Desai & Aakanksha Sharma</div>
+                        </h5>
+                        <i class="bi playListPlay bi-play-circle-fill" id="2"></i>
+                    </li>
+                    <li>
+                        <span>03</span>
+                        <img src="pics/3.jpg" alt="">
+                        <h5>
+                            Nashe Si Chadh Gayi (From "Befikre")
+                            <div class="subtitel">Vishal and Sheykhar & Arijit Singh</div>
+                        </h5>
+                        <i class="bi playListPlay bi-play-circle-fill" id="3"></i>
+                    </li>
+                    <li>
+                        <span>04</span>
+                        <img src="pics/d.jpg" alt="">
+                        <h5>
+                            Dhadak Title Track-Dhadak
+                            <div class="subtitel">Ajay Gogavale & Shreya Ghoshal</div>
+                        </h5>
+                        <i class="bi playListPlay bi-play-circle-fill" id="4"></i>
+                    </li>
+                    <li>
+                        <span>05</span>
+                        <img src="pics/25.jpg" alt="">
+                        <h5>
+                            Jug Jug Jeeve-Shiddat
+                            <div class="subtitel">Sachet Tandon</div>
+                        </h5>
+                        <i class="bi playListPlay bi-play-circle-fill" id="5"></i>
+                    </li>
+                    <li>
+                        <span>06</span>
+                        <img src="pics/38.jpg" alt="">
+                        <h5>
+                            Tu Hai
+                            <div class="subtitel">Darshan Raval, Prakriti Giri</div>
+                        </h5>
+                        <i class="bi playListPlay bi-play-circle-fill" id="6"></i>
+                    </li>
+                    <li>
+                        <span>07</span>
+                        <img src="pics/7.jpg" alt="">
+                        <h5>
+                            Raanjhanaa-Raanjhanaa
+                            <div class="subtitel">Jaswinder Singh & Shiraz Uppal</div>
+                        </h5>
+                        <i class="bi playListPlay bi-play-circle-fill" id="7"></i>
+                    </li>
+                    <li>
+                        <span>08</span>
+                        <img src="pics/8.jpg" alt="">
+                        <h5>
+                            Samjhawan-The Bride Of Humpty Sharma
+                            <div class="subtitel">Dharma Productions</div>
+                        </h5>
+                        <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                    </li>
+                    <li>
+                        <span>09</span>
+                        <img src="pics/d.jpg" alt="">
+                        <h5>
+                            Vaara Re-Dhadak
+                            <div class="subtitel">Ajay Gogavalei</div>
+                        </h5>
+                        <i class="bi playListPlay bi-play-circle-fill" id="9"></i>
+                    </li>
+                    <li>
+                        <span>10</span>
+                        <img src="pics/14.jpg" alt="">
+                        <h5>
+                            Jalebi Title Track - "Jalebi"
+                            <div class="subtitel">KK, Tanishk Bagchi</div>
+                        </h5>
+                        <i class="bi playListPlay bi-play-circle-fill" id="10"></i>
+                    </li>
+                </div>
+            </div>
+            <div id="songs">
+                <div id="trending_songs">
+                    <button id="left" class="normal" onclick="prev_pic()">&#10094;</button>
+                    <button id="right" class="normal" onclick="next_pic()">&#10095;</button>
+                    <img src="pics/3.jpg" alt="" id="poster_pic">
+                    <li class="trending_song_item">
+                        <span>03</span>
+                        <img src="pics/3.jpg" alt="">
+                        <h5>
+                            Ude Dil Befikre (From "Befikre")
+                            <div class="subtitel">Vishal and Sheykhar & Benny Dayal</div>
+                        </h5>
+                        <i class="bi playListPlay bi-play-circle-fill"  onclick="activate_song_popup('pics/3.jpg', 'Ude Dil Befikre (From Befikre)', 'उड़े दिल बेफिक्रे (फ्रॉम बेफिक्रे)', 'ادے دل بیفکرے (فروم بیفکرے)', 'songs/b1.mp3', 'Vishal and Sheykhar & Benny Dayal')"></i>
+                    </li>
+                </div>
+                
+                <div id="trending_songs_with_numbars">
+                    <h1 class="heading">Top 10 Songs
+                        <div>
+                            <i class="bi bi-arrow-left-short" id="pop_song_left1"></i>
+                            <i class="bi bi-arrow-right-short" id="pop_song_right1"></i>
+                        </div>
+                    </h1>
+                    <div class="pop_songs">
+                        <div class="trending_song_box">
+                            <h1 class="sr_numbar">01</h1>
+                            <li class="song_item">
+                                <div class="img_play">
+                                    <img src="pics/25.jpg" alt="">
+                                    <i class="bi playListPlay bi-play-circle-fill"  onclick="activate_song_popup('pics/25.jpg', 'Jug Jug Jeeve-Shiddat', 'जुग जुग जिए - शिद्दत', 'جگ جگ جیوے-شدت', 'songs/25.mp3', 'Sachet Tandon')"></i>
+                                </div>
+                                <h5>
+                                    Jug Jug Jeeve-Shiddat
+                                    <div class="subtitel">Sachet Tandon</div>
+                                </h5>
+                            </li>
+                        </div>
+                        <div class="trending_song_box">
+                            <h1 class="sr_numbar">02</h1>
+                            <li class="song_item">
+                                <div class="img_play">
+                                    <img src="pics/30.jpg" alt="">
+                                    <i class="bi playListPlay bi-play-circle-fill"  onclick="activate_song_popup('pics/30.jpg', 'Haseen','हसीन','حسین', 'songs/hn.mp3', 'Talwiinder, NDS & Rippy Grewal')"></i>
+                                </div>
+                                <h5>
+                                    Haseen
+                                    <div class="subtitel">Talwiinder, NDS & Rippy Grewal</div>
+                                </h5>
+                            </li>
+                        </div>
+                        <div class="trending_song_box">
+                            <h1 class="sr_numbar">03</h1>
+                            <li class="song_item">
+                                <div class="img_play">
+                                    <img src="pics/3.jpg" alt="">
+                                    <i class="bi playListPlay bi-play-circle-fill"  onclick="activate_song_popup('pics/3.jpg', 'Ude Dil Befikre (From Befikre)','उड़े दिल बेफिक्र (फिल्म बे फिक्र से)','نشے سی چھا گئی (فلم بے فکرسے)', 'songs/b1.mp3', 'Vishal and Sheykhar & Benny Dayal')"></i>
+                                </div>
+                                <h5>
+                                    Ude Dil Befikre (From "Befikre")
+                                    <div class="subtitel">Vishal and Sheykhar & Benny Dayal</div>
+                                </h5>
+                            </li>
+                        </div>
+                        <div class="trending_song_box">
+                            <h1 class="sr_numbar">04</h1>
+                            <li class="song_item">
+                                <div class="img_play">
+                                    <img src="pics/8.jpg" alt="">
+                                    <i class="bi playListPlay bi-play-circle-fill"  onclick="activate_song_popup('pics/8.jpg', 'Emotional Fool-The bride of  humpty sharma','इमोशनल फूल-दी ब्राइड ओएफ हम्प्टी शर्मा','ایموشنل فول-دی برائیڈ آف ہمپٹی شرما', 'songs/h1.mp3', 'Sharib Toshi & Toshi Sabri')"></i>
+                                </div>
+                                <h5>
+                                    Emotional Fool-The bride of  humpty sharma
+                                    <div class="subtitel">Sharib Toshi & Toshi Sabri</div>
+                                </h5>
+                            </li>
+                        </div>
+                        <div class="trending_song_box">
+                            <h1 class="sr_numbar">05</h1>
+                            <li class="song_item">
+                                <div class="img_play">
+                                    <img src="pics/21.jpg" alt="">
+                                    <i class="bi playListPlay bi-play-circle-fill"  onclick="activate_song_popup('pics/21.jpg', 'il Ibaadat-Tum Mile','दिल इबादत-तुम मिले','دل عبادت-تم ملے', 'songs/21.mp3', 'K.K.')"></i>
+                                </div>
+                                <h5>
+                                    Dil Ibaadat-Tum Mile
+                                    <div class="subtitel">Kk</div>
+                                </h5>
+                            </li>
+                        </div>
+                        <div class="trending_song_box">
+                            <h1 class="sr_numbar">07</h1>
+                            <li class="song_item">
+                                <div class="img_play">
+                                    <img src="pics/ce.jpg" alt="">
+                                    <i class="bi playListPlay bi-play-circle-fill"  onclick="activate_song_popup('pics/ce.jpg', ' Titli-Chennai Express', 'songs/ce1.mp3', 'Chinmayi Sripada & Gopi Sunder')"></i>
+                                </div>
+                                <h5>
+                                    Titli-Chennai Express
+                                    <div class="subtitel">Chinmayi Sripada & Gopi Sunder</div>
+                                </h5>
+                            </li>
+                        </div>
+                        <div class="trending_song_box">
+                            <h1 class="sr_numbar">08</h1>
+                            <li class="song_item">
+                                <div class="img_play">
+                                    <img src="pics/14.jpg" alt="">
+                                    <i class="bi playListPlay bi-play-circle-fill" onclick="activate_song_popup('pics/14.jpg', 'Mera Pyar Tera Pyar-Jalebi', 'songs/j1.mp3', 'Jeet Gannguli & Arijit Singh')"></i>
+                                </div>
+                                <h5>
+                                    Mera Pyar Tera Pyar-Jalebi
+                                    <div class="subtitel">Jeet Gannguli & Arijit Singh</div>
+                                </h5>
+                            </li>
+                        </div>
+                        <div class="trending_song_box">
+                            <h1 class="sr_numbar">09</h1>
+                            <li class="song_item">
+                                <div class="img_play">
+                                    <img src="pics/18.jpg" alt="">
+                                    <i class="bi playListPlay bi-play-circle-fill"  onclick="activate_song_popup('pics/18.jpg', 'Laapata-Ek Tha Tiger', 'लापता-एक था टाइगर', 'لاپتہ-ایک تھا ٹائیگر', 'songs/18.mp3', 'KK and Palak Muchhal')"></i>
+                                </div>
+                                <h5>
+                                    Laapata-Ek Tha Tiger
+                                    <div class="subtitel">KK and Palak Muchhal</div>
+                                </h5>
+                            </li>
+                        </div>
+                        <div class="trending_song_box">
+                            <h1 class="sr_numbar">10</h1>
+                            <li class="song_item">
+                                <div class="img_play">
+                                    <img src="pics/25.jpg" alt="">
+                                    <i class="bi playListPlay bi-play-circle-fill"  onclick="activate_song_popup('pics/25.jpg', 'Shiddat Titel Track - Shiddat','शिद्दत टाइटल ट्रैक - शिद्दत','شدّت ٹائٹل ٹریک - شدّت', 'songs/s.mp3', 'Manan Bhardwaj')"></i>
+                                </div>
+                                <h5>
+                                    Shiddat Titel Track - Shiddat
+                                    <div class="subtitel">Manan Bhardwaj</div>
+                                </h5>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                <div id="popular_songs1">
+                    <h1 class="heading">Trending Songs
+                        <div>
+                            <i class="bi bi-arrow-left-short" id="pop_song_left2"></i>
+                            <i class="bi bi-arrow-right-short" id="pop_song_right2"></i>
+                        </div>
+                    </h1>
+                    <div class="pop_songs">
+                        <li class="song_item">
+                            <div class="img_play">
+                                <img src="pics/11.jpg" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill" onclick="activate_song_popup('pics/27.jpg', 'Kheech Meri Photo-Sanam Teri Kasam', 'songs/2.mp3', 'Himesh Reshammiya, Neeti Mohan, Akasa Singh & Darshan Raval')"></i>
+                            </div>
+                            <h5>
+                                Bulleya-Sultan
+                                <div class="subtitle">Vishal and Sheykhar & Papon</div>
+                            </h5>
+                        </li>
+                        <li class="song_item">
+                            <div class="img_play">
+                                <img src="pics/34.jpeg" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill" onclick="activate_song_popup('pics/34.jpg', 'Kabhi Kabhi Aditi-Jaane Tu... Ya Jaane Na', 'कभी कभी अदिति-जाने तू।।। या जाने ना', 'کبھی کبھی ادیتی- جانے تُو... یا جانے نہ', 'songs/34.mp3', 'Rashid Ali')"></i>
+                            </div>
+                            <h5>
+                                Kabhi Kabhi Aditi-Jaane Tu... Ya Jaane Na
+                                <div class="subtitle">Rashid Ali</div>
+                            </h5>
+                        </li>
+                        <li class="song_item">
+                            <div class="img_play">
+                                <img src="pics/17.jpg" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill" onclick="activate_song_popup('pics/17.jpg', 'Tu Hi Yaar Mera-Pati Patni Aur Woh', 'तू ही यार मेरा-पति पत्नी और वह', 'تو ہی یار میرا-پتی پتنی اور وہ', 'songs/17.mp3', 'Arijit Singh, Neha Kakkar & Rochak')"></i>
+                            </div>
+                            <h5>
+                                Tu Hi Yaar Mera-"Pati Patni Aur Woh"
+                                <div class="subtitle">Arijit Singh, Neha Kakkar & Rochak</div>
+                            </h5>
+                        </li>
+                        <li class="song_item">
+                            <div class="img_play">
+                                <img src="pics/16.jpg" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill"  onclick="activate_song_popup('pics/16.jpg', 'DIL KAA JO HAAL HAI-BESHARAM', 'दिल का जो हाल है-बेशरम','دل کا جو حال ہے—بےشرم', 'songs/16.mp3', 'ABHIJEET BHATTACHARYA, SHREYA GHOSHAL, LALIT PANDIT & RAJEEV BARNWAL')"></i>
+                            </div>
+                            <h5>
+                                DIL KAA JO HAAL HAI-BESHARAM
+                                <div class="subtitle">ABHIJEET BHATTACHARYA, SHREYA GHOSHAL, LALIT PANDIT & RAJEEV BARNWAL </div>
+                            </h5>
+                        </li>
+                        <li class="song_item">
+                            <div class="img_play">
+                                <img src="pics/20.jpg" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill"  onclick="activate_song_popup('pics/20.jpg', 'ONE BOTTLE DOWN','वन बॉटल डाउन', 'ون بوتل ڈاؤن', 'songs/20.mp3', 'LIL GOLU & YO YO HONEY SINGH')"></i>
+                            </div>
+                            <h5>
+                                ONE BOTTLE DOWN
+                                <div class="subtitle">LIL GOLU & YO YO HONEY SINGH</div>
+                            </h5>
+                        </li>
+                        <li class="song_item">
+                            <div class="img_play">
+                                <img src="pics/kgn.webp" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill"  onclick="activate_song_popup('pics/kgn.webp', 'Choote Na Kabhi Tera Daaman', 'छूटे ना कभी तेरा दामन','چھوٹے نہ کبھی تیرا دامن',  'songs/kgn.mp3', 'Milad Raza Qadri')"></i>
+                            </div>
+                            <h5>
+                                Choote Na Kabhi Tera Daaman
+                                <div class="subtitle">Milad Raza Qadri</div>
+                            </h5>
+                        </li>
+                        <li class="song_item">
+                            <div class="img_play">
+                                <img src="pics/r.webp" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill"  onclick="activate_song_popup('pics/r.webp', 'Regardless','रिगार्डलेस','ریگارڈلیس', 'songs/r.mp3', 'Asim Azhar')"></i>
+                            </div>
+                            <h5>
+                                Regardless
+                                <div class="subtitle">Asim Azhar</div>
+                            </h5>
+                        </li>
+                        <li class="song_item">
+                            <div class="img_play">
+                                <img src="pics/23.jpg" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill" onclick="activate_song_popup('pics/23.jpg', 'Call Aundi-Zorawar', 'काल औन्दी-ज़ोरावर', 'کال آنڈی-زوراور', 'songs/23.mp3', 'Yo Yo Honey Singh')"></i>
+                            </div>
+                            <h5>
+                                Call Aundi-Zorawar
+                                <div class="subtitle">Yo Yo Honey Singh</div>
+                            </h5>
+                        </li>
+                        <li class="song_item">
+                            <div class="img_play">
+                                <img src="pics/2.jpg" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill" onclick="activate_song_popup('pics/2.jpg', 'Jogi-Shaadi Mein Zaroor Aana', 'जोगी-शादी में जरूर आना', 'جوگی-شادی میں ضرور آنا', 'songs/2.mp3', 'Yasser Desai & Aakanksha Sharma')"></i>
+                            </div>
+                            <h5>
+                                Jogi-Shaadi Mein Zaroor Aana
+                                <div class="subtitle">Yasser Desai & Aakanksha Sharma</div>
+                            </h5>
+                        </li>
+                        <li class="song_item">
+                            <div class="img_play">
+                                <img src="pics/gause-e-azam.jpeg" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill" onclick="activate_song_popup('pics/gause-e-azam.jpeg', 'Al Madad Peerane Peer','अल मदद पीराने पीर','المدد پیرانے پیر', 'songs/ga.mp3', 'Mueen Qadri')"></i>
+                            </div>
+                            <h5>
+                                Al Madad Peerane Peer
+                                <div class="subtitle">Mueen Qadri</div>
+                            </h5>
+                        </li>
+                        <li class="song_item">
+                            <div class="img_play">
+                                <img src="pics/d.jpg" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill"  onclick="activate_song_popup('pics/d.jpg', 'Zingaat-Dhadak', 'ज़िंगात-धडक', 'زنگات-دھڑک', 'songs/d3.mp3', 'Ajay Atu')"></i>
+                            </div>
+                            <h5>
+                                Zingaat-Dhadak
+                                <div class="subtitle">Ajay Atu</div>
+                            </h5>
+                        </li>
+                    </div>
+                </div>
+                <div id="popular_songs2">
+                    <h1 class="heading">Popular Songs
+                        <div>
+                            <i class="bi bi-arrow-left-short" id="pop_song_left3"></i>
+                            <i class="bi bi-arrow-right-short" id="pop_song_right3"></i>
+                        </div>
+                    </h1>
+                    <div class="pop_songs">
+                        <li class="song_item">
+                            <div class="img_play">
+                                <img src="pics/7.jpg" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill"  onclick="activate_song_popup('pics/7.jpg', 'Raanjhanaa-Raanjhanaa', 'रांझणा-रांझणा', 'رانجھنا-رانجھنا', 'songs/7.mp3', 'Jaswinder Singh & Shiraz Uppal')"></i>
+                            </div>
+                            <h5>
+                                Raanjhanaa-Raanjhanaa
+                                <div class="subtitle">Jaswinder Singh & Shiraz Uppal</div>
+                            </h5>
+                        </li>
+                        <li class="song_item">
+                            <div class="img_play">
+                                <img src="pics/25.jpg" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill"  onclick="activate_song_popup('pics/25.jpg', 'Jug Jug Jeeve-Shiddat', 'songs/25.mp3', 'Sachet Tandon')"></i>
+                            </div>
+                            <h5>
+                                Jug Jug Jeeve-Shiddat
+                                <div class="subtitle">Sachet Tandon</div>
+                            </h5>
+                        </li>
+                        <li class="song_item">
+                            <div class="img_play">
+                                <img src="pics/3.jpg" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill" onclick="activate_song_popup('pics/3.jpg', 'Nashe Si Chadh Gayi (From Befikre)', 'नशे सी छा गई (फिल्म बे फिक्र से)','نشے سی چھا گئی (فلم بے فکر سے)', 'songs/b2.mp3', 'Vishal and Sheykhar & Arijit Singh')"></i>
+                            </div>
+                            <h5>
+                                Nashe Si Chadh Gayi (From "Befikre")
+                                <div class="subtitle">Vishal and Sheykhar & Arijit Singh</div>
+                            </h5>
+                        </li>
+                        <li class="song_item">
+                            <div class="img_play">
+                                <img src="pics/33.jpg" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill" onclick="activate_song_popup('pics/33.jpg', 'Jugraafiya-Super 30', 'ज्योग्राफीया-सुपर ३०','جغرافیہ - سپر ۳۰', 'songs/33.mp3', 'Udit Narayan & Shreya Ghoshal feat. Hrithik Roshan & Mrunal Thakur')"></i>
+                            </div>
+                            <h5>
+                                Jugraafiya-Super 30
+                                <div class="subtitle">Udit Narayan & Shreya Ghoshal feat. Hrithik Roshan & Mrunal Thakur</div>
+                            </h5>
+                        </li>
+                        <li class="song_item">
+                            <div class="img_play">
+                                <img src="pics/th.jpg" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill"  onclick="activate_song_popup('pics/th.jpg', 'Tajdar-e-Haram', 'ताजदार-ए-हरम','تاجدارأحرام', 'songs/th.mp3', 'Atif Aslam')"></i>
+                            </div>
+                            <h5>
+                                Tajdar-e-Haram
+                                <div class="subtitle">Atif Aslam</div>
+                            </h5>
+                        </li>
+                        <li class="song_item">
+                            <div class="img_play">
+                                <img src="pics/8.jpg" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill"  onclick="activate_song_popup('pics/8.jpg', 'Samjhawan-The Bride Of Humpty Sharma','समझावन-दी ब्राइड ओएफ हम्प्टी शर्मा', 'سمجھاون-دی برائیڈ آف ہمپٹی شرما','songs/8.mp3', 'Dharma Productions')"></i>
+                            </div>
+                            <h5>
+                                Samjhawan-The Bride Of Humpty Sharma
+                                <div class="subtitle">Dharma Productions</div>
+                            </h5>
+                        </li>
+                        <li class="song_item">
+                            <div class="img_play">
+                                <img src="pics/24.jpg" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill" onclick="activate_song_popup('pics/24.jpg', 'Rishte Naate-De Dana Dan', 'रिश्ते नाते-दे दाना दान','رشتے ناتے-دے دانا دان', 'songs/24.mp3', 'Rahat Fateh Ali Khan')"></i>
+                            </div>
+                            <h5>
+                                Rishte Naate-De Dana Dan
+                                <div class="subtitle">Rahat Fateh Ali Khan</div>
+                            </h5>
+                        </li>
+                        <li class="song_item">
+                            <div class="img_play">
+                                <img src="pics/h2.jpg" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill"  onclick="activate_song_popup('pics/h2.jpg', 'KABHI AAYINE PE LIKHA TUJHE-HATE STORY 2','कभी आईने पर लिखा तुझे-हेट स्टोरी 2','کبھی آئینے پر لکھا تجھے-ہیٹ اسٹوری 2', 'songs/h2.mp3', 'K.K., RASHID KHAN and TANVEER GHAZI')"></i>
+                            </div>
+                            <h5>
+                                KABHI AAYINE PE LIKHA TUJHE-HATE STORY 2
+                                <div class="subtitle">K.K., RASHID KHAN and TANVEER GHAZI</div>
+                            </h5>
+                        </li>
+                        <li class="song_item">
+                            <div class="img_play">
+                                <img src="pics/w.PNG" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill"  onclick="activate_song_popup('pics/w.PNG', 'Wishes', 'विशेस','وشز', 'songs/w.mp3', 'Hasan Raheem & Abdullah Kasumbi ft. Talwiinder')"></i>
+                            </div>
+                            <h5>
+                                Wishes
+                                <div class="subtitle">Hasan Raheem & Abdullah Kasumbi ft. Talwiinder</div>
+                            </h5>
+                        </li>
+                        <li class="song_item">
+                            <div class="img_play">
+                                <img src="pics/raza.PNG" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill"  onclick="activate_song_popup('pics/raza.PNG', 'Wallah Wallah in Sha Allah','वाला वाला इन शा अल्लाह','واللہ واللہ ان شاء اللہ', 'songs/raza.mp3', 'Sayyed Abdul Wasi Qadri Razavi')"></i>
+                            </div>
+                            <h5>
+                                Wallah Wallah in Sha Allah
+                                <div class="subtitle">Sayyed Abdul Wasi Qadri Razavi</div>
+                            </h5>
+                        </li>
+                        <li class="song_item">
+                            <div class="img_play">
+                                <img src="pics/cc.jpg" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill" onclick="activate_song_popup('pics/cc.jpg', 'Chunnari Chunnari-Biwi No. 1', 'चुनरी चुनरी-बीवी नं. 1','چناری چناری-بیوی نمبر 1', 'songs/cc.mp3', 'Abhijeet Bhattacharya & Anuradha Sriram')"></i>
+                            </div>
+                            <h5>
+                                Chunnari Chunnari-Biwi No. 1
+                                <div class="subtitle">Abhijeet Bhattacharya & Anuradha Sriram</div>
+                            </h5>
+                        </li>
+                        <li class="song_item">
+                            <div class="img_play">
+                                <img src="pics/d.jpg" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill"  onclick="activate_song_popup('pics/d.jpg', 'Vaara Re-Dhadak','वारा रे-धड़क','وارا رے-دھڑک', 'songs/d2.mp3', 'Ajay Gogavale')"></i>
+                            </div>
+                            <h5>
+                                Vaara Re-Dhadak
+                                <div class="subtitle">Ajay Gogavale</div>
+                            </h5>
+                        </li>
+                        <li class="song_item">
+                            <div class="img_play">
+                                <img src="pics/t.jpg" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill" onclick="activate_song_popup('pics/t.jpg', 'Tabeer','तबीर', 'تعبیر', 'songs/t.mp3', 'Musawir Khan')"></i>
+                            </div>
+                            <h5>
+                               Tabeer
+                                <div class="subtitle">Musawir Khan</div>
+                            </h5>
+                        </li>
+                    </div>
+                </div>
+                <div id="artists">
+                    <h1 class="heading">Popular Artists
+                        <div>
+                            <i class="bi bi-arrow-left-short" id="pop_art_left"></i>
+                            <i class="bi bi-arrow-right-short" id="pop_art_right"></i>
+                        </div>
+                    </h1>
+                    <div id="pa_container">
+                        <div class="artist">
+                            <img src="pics/talwiinder.webp" alt="">
+                            <h2>Talwiinder</h2>
+                            <span>Artist</span>
+                        </div>
+                        <div class="artist">
+                            <img src="pics/arijit_singh.webp" alt="">
+                            <h2>Arijit Singh</h2>
+                            <span>Artist</span>
+                        </div>
+                        <div class="artist">
+                            <img src="pics/faheem.jpg" alt="">
+                            <h2>Faheem Abdullah</h2>
+                            <span>Artist</span>
+                        </div>
+                        <div class="artist">
+                            <img src="pics/rfaKhan.jpeg" alt="">
+                            <h2>Rahat Fateh Ali Khan</h2>
+                            <span>Artist</span>
+                        </div>
+                        <div class="artist">
+                            <img src="pics/KYadav.jpg" alt="">
+                            <h2>Kesari Lal Yadav</h2>
+                            <span>Artist</span>
+                        </div>
+                        <div class="artist">
+                            <img src="pics/guru-randhawa.webp" alt="">
+                            <h2>Guru Randhawa</h2>
+                            <span>Artist</span>
+                        </div>
+                        <div class="artist">
+                            <img src="pics/emraan_hashmi.webp" alt="">
+                            <h2>Emraan Hashmi</h2>
+                            <span>Artist</span>
+                        </div>
+                        <div class="artist">
+                            <img src="pics/hanySingh.webp" alt="">
+                            <h2>YO-YO Hany Singh</h2>
+                            <span>Artist</span>
+                        </div>
+                        <div class="artist">
+                            <img src="pics/parulYadav.webp" alt="">
+                            <h2>Parul Yadav</h2>
+                            <span>Artist</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="movie_songs">
+                    <h1 class="heading">Movie Songs
+                        <div>
+                            <i class="bi bi-arrow-left-short" id="pop_al_left"></i>
+                            <i class="bi bi-arrow-right-short" id="pop_al_right"></i>
+                        </div>
+                    </h1>
+                    <div class="pop_songs">
+                        <li class="song_item">
+                            <div class="img_play">
+                                <img src="pics/40.jpg" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill"  onclick="activate_song_popup('pics/40.jpg', 'Kheech Meri Photo-Sanam Teri Kasam','रातें लंबी (फ़िल्म शेरशाह से)', 'راتیں لمبی (فلم شیرشاہسے)', 'songs/40.mp3', 'Himesh Reshammiya, Neeti Mohan, Akasa Singh & Darshan Raval')"></i>
+                            </div>
+                            <h5>
+                                Raataan Lambiyan (From "Shershaah")
+                                <div class="subtitle">Jubin Nautiyal, Tanishk Bagchi & Asees Kaur</div>
+                            </h5>
+                        </li>
+                        <li class="song_item">
+                            <div class="img_play">
+                                <img src="pics/be.jpg" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill"  onclick="activate_song_popup('pics/be.jpg', 'BLUE EYES','ब्लू आइस', 'songs/be.mp3', 'YO YO HONEY SINGH and LILL GOLLU')"></i>
+                            </div>
+                            <h5>
+                                BLUE EYES
+                                <div class="subtitle">YO YO HONEY SINGH and LILL GOLLU</div>
+                            </h5>
+                        </li>
+                        <li class="song_item">
+                            <div class="img_play">
+                                <img src="pics/i.jpg" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill" onclick="activate_song_popup('pics/i.jpg', 'ISHQ SUFIYANA (MALE)-THE DIRTY PICTURE','इश्क सूफियाना (मुलाकात) - डर्टी पिक्चर','عشق صوفیانہ (ملے)-تھے ڈرٹی پکچر', 'songs/i.mp3', 'VISHAL-SHEKHAR and KAMAL KHAN')"></i>
+                            </div>
+                            <h5>
+                                ISHQ SUFIYANA (MALE)-THE DIRTY PICTURE
+                                <div class="subtitle">VISHAL-SHEKHAR and KAMAL KHAN</div>
+                            </h5>
+                        </li>
+                        <li class="song_item">
+                            <div class="img_play">
+                                <img src="pics/32.jpeg" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill"  onclick="activate_song_popup('pics/32.jpeg', 'Main parinda ho(Aashiq Tera)','मैं परिंदा हो(आशिक तेरा)','میں پرندہ ہوں (عاشق تیرا)','songs/32.mp3', 'Sohail Sen, Altamash Faridi & Mudassar Aziz')"></i>
+                            </div>
+                            <h5>
+                                Main parinda ho(Aashiq Tera)
+                                <div class="subtitle">Sohail Sen, Altamash Faridi & Mudassar Aziz</div>
+                            </h5>
+                        </li>
+                        <li class="song_item">
+                            <div class="img_play">
+                                <img src="pics/dh.jpg" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill"  onclick="activate_song_popup('pics/dh.jpg', 'DEHRADUN','देहरादून','دہرادون', 'songs/dh.mp3', 'KASM')"></i>
+                            </div>
+                            <h5>
+                                DEHRADUN
+                                <div class="subtitle">KASM</div>
+                            </h5>
+                        </li>
+                        <li class="song_item">
+                            <div class="img_play">
+                                <img src="pics/14.jpg" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill" onclick="activate_song_popup('pics/14.jpg', 'Pal-jalebi','पल-जलेबी','پل-جلیبی', 'songs/j2.mp3', 'Arijit Singh, Shreya Ghosha')"></i>
+                            </div>
+                            <h5>
+                                Pal-jalebi
+                                <div class="subtitle">Arijit Singh, Shreya Ghosha</div>
+                            </h5>
+                        </li>
+                        <li class="song_item">
+                            <div class="img_play">
+                                <img src="pics/wth.jpg" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill" onclick="activate_song_popup('pics/wth.jpg', 'Wajah Tum Ho-Hate Story 3','वजह तुम हो - हेट स्टोरी ३','وجہ تم ہو-ہیٹ اسٹوری ۳', 'songs/wth.mp3', 'ARMAAN MALIK, BAMAN & MANOJ MUNTASHIR')"></i>
+                            </div>
+                            <h5>
+                                Wajah Tum Ho-Hate Story 3
+                                <div class="subtitle">ARMAAN MALIK, BAMAN & MANOJ MUNTASHIR</div>
+                            </h5>
+                        </li>
+                        <li class="song_item">
+                            <div class="img_play">
+                                <img src="pics/kn.jpg" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill" onclick="activate_song_popup('pics/kn.jpg', 'Koi Naa (From Bhool Chuk Maaf)','कोई ना (फिल्म भूल चूक माफ़ से)','کوئی نہ (فلم بھول چوک معاف سے)', 'songs/2.mp3', 'Tanishk Bagchi, Gifty, Harnoor & Shreya Ghoshal')"></i>
+                            </div>
+                            <h5>
+                                Koi Naa (From "Bhool Chuk Maaf")
+                                <div class="subtitle">Tanishk Bagchi, Gifty, Harnoor & Shreya Ghoshal</div>
+                            </h5>
+                        </li>
+                        <li class="song_item">
+                            <div class="img_play">
+                                <img src="pics/36.jpg" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill" onclick="activate_song_popup('pics/36.jpg', 'CHAL BHAAG-WELCOME २ KARACHI','चल भाग - वेलकम 2 कराची','songs/36.mp3', 'Love Juneja, Sameer Anjaan, Wajid Ali and Amjad Nadeem Aamir')"></i>
+                            </div>
+                            <h5>
+                                CHAL BHAAG-WELCOME 2 KARACHI
+                                <div class="subtitle">Love Juneja, Sameer Anjaan, Wajid Ali and Amjad Nadeem Aamir</div>
+                            </h5>
+                        </li>
+                        <li class="song_item">
+                            <div class="img_play">
+                                <img src="pics/38.jpg" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill" onclick="activate_song_popup('pics/38.jpg', 'Tu Hai','तू है','تو ہے', 'songs/38.mp3', 'Darshan Raval, Prakriti Giri')"></i>
+                            </div>
+                            <h5>
+                                Tu Hai
+                                <div class="subtitle">Darshan Raval, Prakriti Giri</div>
+                            </h5>
+                        </li>
+                        <li class="song_item">
+                            <div class="img_play">
+                                <img src="pics/p.jpg" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill" onclick="activate_song_popup('pics/p.jpg', 'Tera Mera Hai Pyar Amar (From Ishq Murshid)','तेरा मेरा है प्यार अमर (फिल्म इश्क़ मुर्शिद से)','تیرا میرا ہے پیار امر (فلم عشق مرشد سے)', 'songs/p.mp3', 'Nishaa Zafar')"></i>
+                            </div>
+                            <h5>
+                                Tera Mera Hai Pyar Amar (From "Ishq Murshid")
+                                <div class="subtitle">Nishaa Zafar</div>
+                            </h5>
+                        </li>
+                    </div>
+                </div>
+                <div id="SongPopup" class="popup-overlay">
+                    <div class="popup-box">
+                        <img src="pics/2.jpg" alt="">
+                        <div id="popup_details">
+                            <span id="closeBtn">&times;</span><br>
+                            <marquee loop="-1" scrollamount="5" id="popup_song_name"></marquee><br>
+                            <button onclick="play_music('songs/18.mp3','pics/palpal.jpg', 'Pal Pal  पाल पाल', 'Talwiinder')" class="normal">Play Song</button>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <div id="links_container">
+                        <ul>
+                            <li><strong>Company</strong></li>
+                            <li>About</li>
+                            <li>Jobs</li>
+                            <li>For the Record</li>
+                        </ul>
+                        <ul>
+                            <li><strong>Communities</strong></li>
+                            <li>For Artists</li>
+                            <li>Developers</li>
+                            <li>Advertising</li>
+                            <li>Investors</li>
+                            <li>Vendors</li>
+                        </ul>
+                        <ul>
+                            <li><strong>Useful links</strong></li>
+                            <li>Support</li>
+                            <li>Free Mobile App</li>
+                            <li>For the Record</li>
+                            <li>Popular by</li>
+                            <li>Country</li>
+                            <li>Import your music</li>
+                        </ul>
+                        <ul>
+                            <li><strong>Musiq Plans</strong></li>
+                            <li>Premium Individual</li>
+                            <li>Premium Duo</li>
+                            <li>Premium Family</li>
+                            <li>Premium Student</li>
+                            <li>Musiq Free</li>
+                        </ul>
+                        <div id="icons">
+                            <li><strong>Click The Icons For My <br> Socialmedia Account</strong></li>
+                            <li><a href="https://www.instagram.com/_zeeshan_inamdar_/"><i class="bi bi-instagram"></i></a></li>
+                            <li><a href="https://github.com/mr-inamdar"><i class="bi bi-github"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/zeeshan-inamdar-349b95377/"><i class="bi bi-linkedin"></i></a></li>
+                        </div>
+                    </div>
+                    <h3>© 2025 Musiq AB</h3>
+                </footer>
+            </div> 
+        </div>
+        <div id="play_system">
+            <div class="wave">
+                <div class="wave1"></div>
+                <div class="wave1"></div>
+                <div class="wave1"></div>
+            </div>
+            <img src="pics/d.jpg" alt="" id="poster_master_play">
+            <h5 id="title">
+                <marquee behavior="loop" direction="-1" width="100%"><span lang="angreji" id="angreji">Dhadak Title Track - Dhadak</span> &nbsp; <span lang="hindi" id="hindi">धडक टाइटल ट्रैक - धडक</span> &nbsp; <span lang="urdu" id="urdu">دھڑک ٹائٹل ٹریک - دھڑک</span></marquee>
+                <div class="subtitle">Ajay Gogavale & Shreya Ghoshal</div>
+            </h5>
+            <div class="icon">
+                <i class="bi shuffle bi-music-note-beamed">next</i>
+                <i class="bi bi-skip-start-circle" id="next" onclick="play_previous_song()"></i>
+                <i class="bi bi-play-circle" id="master_play_icon" onclick="togglePlayPause()"></i>
+                <i class="bi bi-skip-end-circle" id="back" onclick="call_play_next_song()"></i>
+                <a href="songs/d1.mp3" download="Ajay Gogavale & Shreya Ghoshal-Dhadak Title Track - Dhadak" id="dowload_music"><i class="bi bi-arrow-down-circle"></i></a>
+            </div>
+            <span id="current_time">0:00</span>
+            <div class="bar">
+                <input type="range" id="seek" min="0" max="100">
+                <div id="bar2"></div>
+                <div class="dot"></div>
+            </div>
+            <span id="current_end">0:30</span>
+            <div class="vol">
+                <i class="bi bi-volume-up-fill" id="vol_icon"></i>
+                <input type="range" min="0" max="100" id="vol_input">
+                <div class="vol_bar"></div>
+                <div class="dot" id="vol_dot"></div>
+            </div>
+        </div>
+        <div id="mobile_footer">
+            <div id="home" class="feature" onclick="display_home_page()">
+                <i class="bi bi-house-fill" id="home"></i>
+                <span>Home</span>
+            </div>
+            <div id="ur_library" class="feature" onclick="display_playlist_page()">
+                <i class="bi bi-music-note-list"></i>
+                <span>Playlist</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
