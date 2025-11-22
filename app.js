@@ -393,6 +393,8 @@ function play_music(song_src, song_ki_pic, song_ka_naam_angreji, song_ka_naam_hi
     gana.src = song_src;
     dowload_music.setAttribute(`download`, `${artist_ka_naam}-${song_ka_naam_angreji}`);
     dowload_music.href = song_src;
+    makeAllBackground();
+    makeAllPlays();
     play_audio(song_ki_pic, song_ka_naam_angreji, song_ka_naam_hindi, song_ka_naam_urdu, artist_ka_naam);
 }
 // song Info System
@@ -578,4 +580,5 @@ gana.addEventListener('ended', ()=>{
             random_musiq();
             break;
     }
+
 });
