@@ -1173,4 +1173,10 @@ footer h3{
     #main #sub_main #playlist #playlist_songs {
         height: 55%;
     }
+    #main #web_header{
+        padding: 4px;
+    }
+    #main #web_header #search_system label{
+        display: none;
+    }
 }
