@@ -1069,16 +1069,7 @@ footer h3{
         right: -20px;
         left: 20px;
         transform: rotate(90deg);
-    }
-    /* #main #play_system .vol .vol_bar,
-    #main #play_system .vol input{
-        transform: rotate(90deg);
-        width: 70px;
-    }
-    #play_system .vol .dot{
-        top: -38px;
-        left: 32.5px;
-    } */
+    }
     #main #play_system .vol .vol_bar,
     #main #play_system .vol input{
         transform: rotate(180deg);
@@ -1149,7 +1140,7 @@ footer h3{
     }
     #main #play_system #current_end{
         position: absolute;
-        left: 330px;
+        left: 310px;
         top: 60px;
         bottom: 10px;
     }
@@ -1168,6 +1159,9 @@ footer h3{
     #main #play_system .vol input{
         transform: rotate(180deg);
         width: 60px;
+    }
+    #main #play_system .vol input{
+        transform: rotate(180deg);
     }
     #play_system .vol .dot{
         top: -1.5px;
