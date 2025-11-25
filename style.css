@@ -952,16 +952,6 @@ footer h3{
     }
 }
 @media (max-width:499px) {
-    /* body, html {
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
-    }
-    #main{
-        max-width: 100vw;
-        max-height: 100vh;
-        overflow: hidden;
-    } */
     #main #web_header  #options{
         height: 79vh;
     }
@@ -990,6 +980,9 @@ footer h3{
     }
     #main #sub_main #songs{
         width: 100%;
+    }
+    #main #web_header #search_system label{
+        display: none;
     }
     #main #mobile_footer{
         display: flex;
@@ -1038,7 +1031,7 @@ footer h3{
     #main #play_system .icon{
         position: absolute;
         left: 70px;
-        bottom: 10px;
+        bottom: 0px;
     }
     #main #play_system #current_time{
         position: absolute;
@@ -1053,7 +1046,7 @@ footer h3{
     }
     #main #play_system #current_end{
         position: absolute;
-        left: 330px;
+        left: 78%;
         top: 64px;
     }
     #main #play_system .vol{
@@ -1061,7 +1054,7 @@ footer h3{
         transform: rotate(270deg);
         width: 70px;
         top: 50px;
-        right: -5px;
+        right: -25px;
     }
     #play_system .vol .bi{
         position: absolute;
@@ -1069,9 +1062,8 @@ footer h3{
         right: -20px;
         left: 20px;
         transform: rotate(90deg);
-    }
-    #main #play_system .vol .vol_bar,
-    #main #play_system .vol input{
+    }
+    #main #play_system .vol .vol_bar{
         transform: rotate(180deg);
         width: 60px;
     }
@@ -1083,100 +1075,4 @@ footer h3{
         width: 90vw;
     }
 
-}
-@media (max-width:399px){
-    #main #play_system .wave,
-     #main #play_system #poster_master_play,
-      #main #play_system #title{
-        position: absolute;
-        top: 10px;
-    }
-    #main #play_system .wave{
-        left: 8px;
-        top: 20px;
-    }
-    #play_system .wave .wave1{
-        height: 14px;
-    }
-    #play_system .wave .wave1:nth-child(2){
-        height: 17px;
-    }
-    #play_system .wave .wave1:nth-child(3){
-        height: 13px;
-    }
-    #main #play_system #poster_master_play{
-        left: 40px;
-        width: 45px;
-        height: 45px;
-    }
-    #main #play_system #title{
-        left: 80px;
-        width: 50%;
-    }
-    #main #play_system .icon{
-        position: absolute;
-        font-size: 1rem;
-        left: 6px;
-        bottom: 10px;
-        margin-left: 10px;
-    }
-    #main #play_system #dowload_music,
-    #main #play_system .shuffle{
-        font-size: 1rem;
-        margin-right: 5px;
-    }
-    #main #play_system #current_time{
-        position: absolute;
-        left: 120px;
-        top: 60px;
-        bottom: 10px;
-    }
-    #main #play_system .bar{
-        position: absolute;
-        left: 155px;
-        top: 65px;
-        bottom: 8px;
-        width: 42%;
-    }
-    #main #play_system #current_end{
-        position: absolute;
-        left: 310px;
-        top: 60px;
-        bottom: 10px;
-    }
-    #main #play_system .vol{
-        position: absolute;
-        top: 50px;
-        right: -20px;
-    }
-    #play_system .vol .bi{
-        position: absolute;
-        top: -15px;
-        right: -20px;
-        left: 20px;
-    }
-    #main #play_system .vol .vol_bar,
-    #main #play_system .vol input{
-        transform: rotate(180deg);
-        width: 60px;
-    }
-    #main #play_system .vol input{
-        transform: rotate(180deg);
-    }
-    #play_system .vol .dot{
-        top: -1.5px;
-        left: 60px;
-    }
-    #main #sub_main #playlist #playlist_header {
-        height: 45%;
-    }
-    #main #sub_main #playlist #playlist_songs {
-        height: 55%;
-    }
-    #main #web_header{
-        padding: 4px;
-    }
-    #main #web_header #search_system label{
-        display: none;
-    }
 }
