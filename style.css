@@ -901,7 +901,8 @@ footer h3{
 }
 #closeBtn{
     position: absolute;
-    top: 10px; right: 15px;
+    top: 10px;
+    right: 15px;
     cursor: pointer;
     font-size: 20px;
 }
@@ -940,7 +941,7 @@ footer h3{
         top: 20px;
         display: block;
         background-color: transparent;
-        font-family: cursive;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
         color: red;
     }
     #main #web_header #search_system{
@@ -1076,3 +1077,4 @@ footer h3{
     }
 
 }
+
