@@ -782,7 +782,7 @@ footer h3{
 }
 #play_system .bar{
     position: relative;
-    width: 43%;
+    width: 90%;
     height: 2px;
     background: rgb(105, 105, 105, 0.5);
     margin: 0px 15px 0px 10px;
