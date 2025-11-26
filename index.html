@@ -283,7 +283,7 @@
                         <li class="song_item">
                             <div class="img_play">
                                 <img src="pics/11.jpg" alt="">
-                                <i class="bi playListPlay bi-play-circle-fill" onclick="activate_song_popup('pics/27.jpg', 'Kheech Meri Photo-Sanam Teri Kasam', 'songs/2.mp3', 'Himesh Reshammiya, Neeti Mohan, Akasa Singh & Darshan Raval')"></i>
+                                <i class="bi playListPlay bi-play-circle-fill" onclick="activate_song_popup('pics/11.jpg', 'Bulleya-Sultan','बिल्लेया सुलतान', 'بلییا - سلطان', 'songs/11.mp3', 'Vishal and Sheykhar & Papon')"></i>
                             </div>
                             <h5>
                                 Bulleya-Sultan
@@ -752,7 +752,7 @@
                         </ul>
                         <div id="icons">
                             <li><strong>Click The Icons For My <br> Socialmedia Account</strong></li>
-                            <li><a href="https://www.instagram.com/_zeeshan_inamdar_/"><i class="bi bi-instagram"></i></a></li>
+                            <li><a href="https://www.instagram.com/_mr.inamdar_/"><i class="bi bi-instagram"></i></a></li>
                             <li><a href="https://github.com/mr-inamdar"><i class="bi bi-github"></i></a></li>
                             <li><a href="https://www.linkedin.com/in/zeeshan-inamdar-349b95377/"><i class="bi bi-linkedin"></i></a></li>
                         </div>
@@ -762,30 +762,38 @@
             </div> 
         </div>
         <div id="play_system">
-            <div class="wave">
-                <div class="wave1"></div>
-                <div class="wave1"></div>
-                <div class="wave1"></div>
+            <div id="div1">
+                <div id="div2">
+                    <div class="wave">
+                        <div class="wave1"></div>
+                        <div class="wave1"></div>
+                        <div class="wave1"></div>
+                    </div>
+                    <img src="pics/d.jpg" alt="" id="poster_master_play">
+                    <h5 id="title">
+                        <marquee behavior="loop" direction="-1" width="100%"><span lang="angreji" id="angreji">Dhadak Title Track - Dhadak</span> &nbsp; <span lang="hindi" id="hindi">धडक टाइटल ट्रैक - धडक</span> &nbsp; <span lang="urdu" id="urdu">دھڑک ٹائٹل ٹریک - دھڑک</span></marquee>
+                        <div class="subtitle">Ajay Gogavale & Shreya Ghoshal</div>
+                    </h5>
+                </div>
+                <div id="div3">
+                    <div class="icon">
+                        <i class="bi shuffle bi-music-note-beamed">next</i>
+                        <i class="bi bi-skip-start-circle" id="next" onclick="play_previous_song()"></i>
+                        <i class="bi bi-play-circle" id="master_play_icon" onclick="togglePlayPause()"></i>
+                        <i class="bi bi-skip-end-circle" id="back" onclick="call_play_next_song()"></i>
+                        <a href="songs/d1.mp3" download="Ajay Gogavale & Shreya Ghoshal-Dhadak Title Track - Dhadak" id="dowload_music"><i class="bi bi-arrow-down-circle"></i></a>
+                    </div>
+                    <div id="manege_system">
+                        <span id="current_time">0:00</span>
+                        <div class="bar">
+                            <input type="range" id="seek" min="0" max="100">
+                            <div id="bar2"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <span id="current_end">0:30</span>
+                    </div>
+                </div>
             </div>
-            <img src="pics/d.jpg" alt="" id="poster_master_play">
-            <h5 id="title">
-                <marquee behavior="loop" direction="-1" width="100%"><span lang="angreji" id="angreji">Dhadak Title Track - Dhadak</span> &nbsp; <span lang="hindi" id="hindi">धडक टाइटल ट्रैक - धडक</span> &nbsp; <span lang="urdu" id="urdu">دھڑک ٹائٹل ٹریک - دھڑک</span></marquee>
-                <div class="subtitle">Ajay Gogavale & Shreya Ghoshal</div>
-            </h5>
-            <div class="icon">
-                <i class="bi shuffle bi-music-note-beamed">next</i>
-                <i class="bi bi-skip-start-circle" id="next" onclick="play_previous_song()"></i>
-                <i class="bi bi-play-circle" id="master_play_icon" onclick="togglePlayPause()"></i>
-                <i class="bi bi-skip-end-circle" id="back" onclick="call_play_next_song()"></i>
-                <a href="songs/d1.mp3" download="Ajay Gogavale & Shreya Ghoshal-Dhadak Title Track - Dhadak" id="dowload_music"><i class="bi bi-arrow-down-circle"></i></a>
-            </div>
-            <span id="current_time">0:00</span>
-            <div class="bar">
-                <input type="range" id="seek" min="0" max="100">
-                <div id="bar2"></div>
-                <div class="dot"></div>
-            </div>
-            <span id="current_end">0:30</span>
             <div class="vol">
                 <i class="bi bi-volume-up-fill" id="vol_icon"></i>
                 <input type="range" min="0" max="100" id="vol_input">
@@ -809,4 +817,5 @@
 </body>
 
 </html>
+
 
