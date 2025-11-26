@@ -955,6 +955,7 @@ footer h3{
 @media (max-width:499px) {
     #main #web_header  #options{
         height: 79vh;
+        
     }
     #main #sub_main{
         height: 67%;
@@ -1001,15 +1002,19 @@ footer h3{
     #main #play_system{
         position: relative;
     }
-    #main #play_system .wave,
-     #main #play_system #poster_master_play,
-      #main #play_system #title{
-        position: absolute;
-        top: 10px;
+    #main #play_system #div1{
+        flex-direction: column;
+        width: 90%;
     }
-    #main #play_system .wave{
-        left: 8px;
-        top: 20px;
+    #main #play_system #div1 #div2{
+        width: 100%;
+        height: 60%;
+    }
+    #main #play_system #div1 #div3{
+        flex-direction: column;
+        width: 100%;
+        height: 40%;
+        position: relative;
     }
     #play_system .wave .wave1{
         height: 14px;
@@ -1021,60 +1026,46 @@ footer h3{
         height: 13px;
     }
     #main #play_system #poster_master_play{
-        left: 40px;
         width: 45px;
         height: 45px;
     }
     #main #play_system #title{
-        left: 80px;
         width: 60%;
     }
     #main #play_system .icon{
         position: absolute;
-        left: 70px;
-        bottom: 0px;
+        bottom: 2px;
     }
     #main #play_system #current_time{
         position: absolute;
-        left: 0px;
-        top: 65px;
+        left: -10px;
+        top: 5px;
     }
     #main #play_system .bar{
         position: absolute;
-        left: 50px;
-        top: 67px;
-        width: 60%;
+        left: 28px;
+        top: 10px;
     }
     #main #play_system #current_end{
         position: absolute;
-        left: 78%;
-        top: 64px;
+        right: -10px;
+        top: 5px;
     }
     #main #play_system .vol{
         position: absolute;
         transform: rotate(270deg);
-        width: 70px;
-        top: 50px;
-        right: -25px;
+        right: -20px;
+        width: 20%;
     }
     #play_system .vol .bi{
-        position: absolute;
-        top: -15px;
-        right: -20px;
-        left: 20px;
         transform: rotate(90deg);
-    }
-    #main #play_system .vol .vol_bar{
-        transform: rotate(180deg);
-        width: 60px;
-    }
-    #play_system .vol .dot{
-        top: -1.5px;
-        left: 60px;
+        position: absolute;
+        top: 30px;
+        right: -50px;   
+
     }
     .popup-box{
         width: 90vw;
     }
 
 }
-
